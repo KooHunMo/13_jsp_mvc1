@@ -74,9 +74,9 @@ public class MemberDao {
 	}
 	
 	public boolean login(String id , String passwd) {
-		
-		boolean isValidMember = false;
-		
+		//세션을 이용하기 때문에 id,와 passwd를 직접 Dto에서 받아온다.
+				boolean isValidMember = false;
+
 		try {
 			
 			conn = getConnection();
@@ -159,6 +159,7 @@ public class MemberDao {
 			
 		} catch (Exception e) {
 			e.printStackTrace();
+			
 		} finally {
 			try {rs.close();}    catch (SQLException e) {e.printStackTrace();}
 			try {pstmt.close();} catch (SQLException e) {e.printStackTrace();}
