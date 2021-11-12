@@ -41,8 +41,8 @@
 			if (rs.next()) {
 				
 				pstmt = conn.prepareStatement("UPDATE MEMBER SET NAME = ? WHERE ID = ?");	
-				pstmt.setString(1 , name);
-				pstmt.setString(2 , id);
+				pstmt.setString(1 , name);	// 순서는 쿼리문에 앞에 나온순서대로 적어야한다.
+				pstmt.setString(2 , id);   // id와 name을 엮어서 같이 업데이트 하면서 name을 바꾼다.
 				pstmt.executeUpdate();
 	%>
 				<script>

@@ -20,7 +20,7 @@
 	
 		Connection conn         = null;
 		PreparedStatement pstmt = null;
-		ResultSet rs            = null; // select문의 결과를 저장할 객체
+		ResultSet rs            = null; // select문의 결과를 저장할 객체 //select문을 쓸 때 rs를 쓰면 된다!
 		
 		try {
 			
